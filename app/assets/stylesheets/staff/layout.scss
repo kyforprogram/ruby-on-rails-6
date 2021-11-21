@@ -1,3 +1,5 @@
+@import "colors";
+
 html, body {
   margin: 0;
   padding: 0;
@@ -9,5 +11,27 @@ div#wrapper {
   min-height: 100%;
   margin: 0 auto;
   padding-bottom: 48px;
-  background-color: #ccccc;
+  // background-color: #cccccc;
+  background-color: &gray;
+  
+}
+header {
+  padding: 5px;
+  background-color: #448888;
+  color: #eee;
+  span.logo-mark {
+    font-weight: bold;
+  }
+}
+footer {
+  bottom: 0;
+  position: absolute;
+  width: 100%;
+  background-color: #666;
+  color: #eee;
+  p{
+    text-align: center;
+    padding: 5px;
+    margin: 0;
+  }
 }
