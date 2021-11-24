@@ -12,7 +12,7 @@ class ApplicationController < ActionController::Base
   rescue_from StandardError, with: :rescue500
   rescue_from Forbidden, with: :rescue403
   rescue_from IpAddressRejected, with: :rescue403
-  rescue_from ActiveRecord::RecordNotFound, with: :rescue404
+
 
   private def set_layout
     if params[:controller].match(%r{\A(staff|admin|customer)/})
