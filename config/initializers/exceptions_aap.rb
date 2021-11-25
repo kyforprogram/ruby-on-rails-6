@@ -9,6 +9,6 @@ Rails.application.configure do
     else; :internal_server_error
     end
 
-    ErrorsController.action(action).call(envs)
+    ErrorsController.action(action).call(env)
   end
 end

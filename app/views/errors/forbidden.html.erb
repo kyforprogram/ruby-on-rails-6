@@ -4,7 +4,7 @@
     <%=
       case @exception
       when ApplicationController::IpAddressRejected
-        "coudn't access"
+        "coudn't access from your IP(#{request.ip}) Address "
       else
         "閲覧権限がありません"
       end
