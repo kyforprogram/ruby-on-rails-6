@@ -13,7 +13,7 @@ div#wrapper {
   padding-bottom: 48px;
   // background-color: #cccccc;
   background-color: &gray;
-  
+
 }
 header {
   padding: 5px;
@@ -21,6 +21,10 @@ header {
   color: #eee;
   span.logo-mark {
     font-weight: bold;
+  }
+  a {
+    float: right;
+    color: #eee;
   }
 }
 footer {
