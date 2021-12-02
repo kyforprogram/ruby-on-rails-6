@@ -23,4 +23,8 @@ class Staff::SessionsController < Staff::Base
     end
   end
 
+  def destroy 
+    session.delete(:staff_member_id)
+    redirect_to :staff_root
+  end
 end
