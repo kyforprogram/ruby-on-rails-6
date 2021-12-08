@@ -11,4 +11,5 @@ class Staff::Authenticator
     (@staff_member.end_date.nil? || @staff_member.end_date > Date.today) &&
     BCrypt::Password.new(@staff_member.hashed_password) == raw_password
   end
+  
 end
