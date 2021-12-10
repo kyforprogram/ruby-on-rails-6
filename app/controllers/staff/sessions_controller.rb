@@ -18,7 +18,7 @@ class Staff::SessionsController < Staff::Base
     if Staff::Authenticator.new(staff_member).authenticate(@form.password)
       if staff_member.suspended?
         flash.now.alert = "アカウントが停止されています"
-        render action :new
+        render action: "new"
       else
         session[:staff_member_id] = staff_member.id
         flash.notice = "ログインしました"
