@@ -1,11 +1,11 @@
-class Admin::SessionsController < Admin::Base
+
+class Staff::SessionsController < Staff::Base
 
   def new
-    if current_administrator
-      redirect_to :admin_root
+    if current_staff_member
+      redirect_to :staff_root
     else
-      # @form = Staff::LoginForm.new
-      @form = Admin::LoginForm.new
+      @form = Staff::LoginForm.new
       render action: "new"
     end
   end
@@ -37,6 +37,7 @@ class Admin::SessionsController < Admin::Base
     session.delete(:admin_member_id)
     flash.notice = "ログアウトしました"
     redirect_to :admin_root
+
   end
 
 end
